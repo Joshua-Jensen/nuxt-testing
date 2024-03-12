@@ -12,11 +12,11 @@
       <div class="col-8">
         <div class="row">
 
-          <div class="col-md-4 align-items-center row padding">
+          <div class="col-md-4 align-items-center row padding text-dark">
             <h6 class="">Phone</h6>
-            <a class="mb-2 no-hyperlink" href="tel:+1702558-8324">(702) 558-8324</a>
+            <a class="mb-2 no-hyperlink text-dark " href="tel:+1702558-8324">(702) 558-8324</a>
             <h6>Email</h6>
-            <a class="mb-2 no-hyperlink" href="mailto:support@intellatek.net">support@intellatek.net</a>
+            <a class="mb-2 no-hyperlink text-dark" href="mailto:support@intellatek.net">support@intellatek.net</a>
             <h6 class="">Address</h6>
             <p>1378 Paseo Verde Pkwy #200, Henderson, NV 89012</p>
           </div>

@@ -1,6 +1,6 @@
 <template>
 
-  <form @submit.prevent="test()" class="form-floating needs-validation row px-5" novalidate>
+  <form @submit.prevent="test()" class="form-floating needs-validation row px-5 text-dark" novalidate>
 
     <div class="col-6 mb-3 form-floating ">
 

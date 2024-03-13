@@ -1,35 +1,10 @@
 <template>
-  <div class="row justify-content-center pb-5">
-    <div class="col-8 custom-card rounded p-3 px-5 position-relative" v-if="activeItem == 1">
-      <img class="image mb-3" src="https://www.intellatek.net/assets/images/services/remote.png" alt="">
-      <h2>State / Federal Testing Support: MAP, ACT, WIDA, SBAC</h2>
-      <p class="margin-bottom">Intellatek configures testing servers as well as the virtual TSM’s needed in order to
-        test multiple grade
-        levels at once. Furthermore, we set up the device toolkit on behalf of the campuses, which provide the
-        configuration files to each computer. Additionally, confirming that the latest testing software version has been
-        pushed out to all devices across all campuses. We also work with testing coordinators to prepared them for all
-        the
-        “How To’s” and “What If’s” needed to successfully test. Next, spot checked multiple laptop, desktops,
-        chromebooks
-        to make sure testing is working. Intellatek also provides a tech for the first day of testing just in case to
-        provide additional support for test coordinators.</p>
-      <button @click="close()" class="btn btn-danger btn-rounded button-position">close</button>
-    </div>
-    <div class="col-12" v-if="activeItem == 2">2</div>
-    <div class="col-12" v-if="activeItem == 3">3</div>
-    <div class="col-12" v-if="activeItem == 4">4</div>
-  </div>
-
-
-
-
-  <div class="row px-5 holder">
-    <div class="padding col-md-3 col-sm-6 py-3 item selectable">
-      <div class="services-card  rounded background-testing d-flex justify-content-center align-items-center">
-
-        <h4 class="readability"> Testing Support</h4>
-        <p class="readability-dark rounded">Intellatek configures testing servers as well as the virtual TSM’s needed in
-          order to
+  <div class="container-fluid">
+    <div class="row justify-content-center pb-5">
+      <div class="col-8 custom-card rounded p-3 px-5 position-relative" v-if="activeItem == 1">
+        <img class="image mb-3" src="https://www.intellatek.net/assets/images/services/remote.png" alt="">
+        <h2>State / Federal Testing Support: MAP, ACT, WIDA, SBAC</h2>
+        <p class="margin-bottom">Intellatek configures testing servers as well as the virtual TSM’s needed in order to
           test multiple grade
           levels at once. Furthermore, we set up the device toolkit on behalf of the campuses, which provide the
           configuration files to each computer. Additionally, confirming that the latest testing software version has
@@ -40,37 +15,69 @@
           chromebooks
           to make sure testing is working. Intellatek also provides a tech for the first day of testing just in case to
           provide additional support for test coordinators.</p>
-        <button @click="open(1)" class="btn btn-primary opening">learn more</button>
+        <button @click="close()" class="btn btn-danger btn-rounded button-position">close</button>
       </div>
+      <div class="col-12" v-if="activeItem == 2">2</div>
+      <div class="col-12" v-if="activeItem == 3">3</div>
+      <div class="col-12" v-if="activeItem == 4">4</div>
     </div>
-    <div class="padding col-md-3 col-sm-6 py-3 item selectable">
-      <div class="services-card rounded background-app d-flex justify-content-center align-items-center">
-        <h4 class="readability"> Application Management</h4>
-        <p class="readability-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem veniam
-          sit deserunt nemo culpa sint quaerat quasi nostrum alias aperiam repudiandae, hic vel dolore expedita,
-          voluptatum aut, eos quia.</p>
-        <button @click="open(2)" class="btn btn-primary opening">learn more</button>
-      </div>
-    </div>
-    <div class="padding col-md-3 col-sm-6 py-3 item selectable">
-      <div class="services-card rounded background-admin d-flex justify-content-center align-items-center">
-        <h4 class="readability"> Administration Solutions</h4>
-        <p class="readability-dark"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatibus eius
-          fuga enim consequuntur molestias placeat eum id amet, suscipit at. Quidem soluta similique deleniti autem,
-          nobis
-          culpa non recusandae.</p>
-        <button @click="open(3)" class="btn btn-primary opening">learn more</button>
-      </div>
-    </div>
-    <div class="padding col-md-3 col-sm-6 py-3 item selectable">
-      <div class="services-card rounded background-additional d-flex justify-content-center align-items-center">
-        <h4 class="readability"> Additional Services</h4>
-        <p class="readability-dark rounded">hello whats this</p>
-        <button @click="open(4)" class="btn btn-primary opening">learn more</button>
-      </div>
-    </div>
-    this is a test
 
+
+
+
+    <div class="row px-5 holder">
+      <div class="padding col-md-3 col-sm-6 py-3 item selectable">
+        <div class="services-card  rounded background-testing d-flex justify-content-center align-items-center"
+          @mouseover="expand(1)" @mouseleave="collapse(1)">
+
+          <h4 class="readability"> Testing Support</h4>
+          <p class="readability-dark rounded">Intellatek configures testing servers as well as the virtual TSM’s needed
+            in
+            order to
+            test multiple grade
+            levels at once. Furthermore, we set up the device toolkit on behalf of the campuses, which provide the
+            configuration files to each computer. Additionally, confirming that the latest testing software version has
+            been
+            pushed out to all devices across all campuses. We also work with testing coordinators to prepared them for
+            all
+            the
+            “How To’s” and “What If’s” needed to successfully test. Next, spot checked multiple laptop, desktops,
+            chromebooks
+            to make sure testing is working. Intellatek also provides a tech for the first day of testing just in case
+            to
+            provide additional support for test coordinators.</p>
+          <button @click="open(1)" class="btn btn-primary opening">learn more</button>
+        </div>
+      </div>
+      <div class="padding col-md-3 col-sm-6 py-3 item selectable" @mouseover="expand(2)" @mouseleave="collapse(2)">
+        <div class="services-card rounded background-app d-flex justify-content-center align-items-center">
+          <h4 class="readability"> Application Management</h4>
+          <p class="readability-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem
+            veniam
+            sit deserunt nemo culpa sint quaerat quasi nostrum alias aperiam repudiandae, hic vel dolore expedita,
+            voluptatum aut, eos quia.</p>
+          <button @click="open(2)" class="btn btn-primary opening">learn more</button>
+        </div>
+      </div>
+      <div class="padding col-md-3 col-sm-6 py-3 item selectable" @mouseover="expand(3)" @mouseleave="collapse(3)">
+        <div class="services-card rounded background-admin d-flex justify-content-center align-items-center">
+          <h4 class="readability"> Administration Solutions</h4>
+          <p class="readability-dark"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatibus eius
+            fuga enim consequuntur molestias placeat eum id amet, suscipit at. Quidem soluta similique deleniti autem,
+            nobis
+            culpa non recusandae.</p>
+          <button @click="open(3)" class="btn btn-primary opening">learn more</button>
+        </div>
+      </div>
+      <div class="padding col-md-3 col-sm-6 py-3 item selectable" @mouseover="expand(4)" @mouseleave="collapse(4)">
+        <div class="services-card rounded background-additional d-flex justify-content-center align-items-center">
+          <h4 class="readability"> Additional Services</h4>
+          <p class="readability-dark rounded">hello whats this</p>
+          <button @click="open(4)" class="btn btn-primary opening">learn more</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -85,13 +92,24 @@ import { computed, onMounted, ref } from 'vue';
 export default {
   setup() {
     const activeItem = ref({})
+    const card1 = null
+    const card2 = null
+    const card3 = null
+    const card4 = null
     return {
+      card1,
+      card2,
+      card3,
+      card4,
       activeItem,
       open(item) {
         activeItem.value = 1
       },
       close() {
         activeItem.value = null
+      },
+      collapse(item) {
+
       }
     }
   }

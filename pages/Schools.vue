@@ -1,6 +1,10 @@
 <template>
-  <div class="about">
-    <h1>this is the schools page</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <img src="" alt="school image">
+      </div>
+    </div>
   </div>
 </template>
 

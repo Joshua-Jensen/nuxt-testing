@@ -1,5 +1,3 @@
-import FooterBar from "./components/FooterBar.vue";
-
 <template>
   <header>
     <NavBar />
@@ -10,6 +8,23 @@ import FooterBar from "./components/FooterBar.vue";
   </footer>
 
 </template>
+
+<script>
+import { onMounted } from "vue"
+export default {
+  setup() {
+    function createSchoolList() {
+    }
+    onMounted(() => {
+      School.createSchoolList()
+    })
+    return {
+
+    }
+  },
+
+}
+</script>
 
 
 <style scoped>

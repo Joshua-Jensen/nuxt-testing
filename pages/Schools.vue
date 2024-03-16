@@ -9,9 +9,13 @@
 </template>
 
 <script>
+import { schoolList } from "~/models/School";
+import { computed, onMounted } from "vue";
 export default {
   setup() {
+
     return {
+
 
     }
   }

@@ -18,5 +18,9 @@
     "titleBar.inactiveBackground": "#dcf08199",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#dcf081"
+  "peacock.color": "#dcf081",
+  "cSpell.words": [
+    "doral",
+    "doralcactus"
+  ]
 }

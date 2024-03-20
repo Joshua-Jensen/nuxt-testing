@@ -1,4 +1,8 @@
 import { reactive } from "vue"
+export const appState = reactive({
+  /** @type {import('./models/School.js').School} */
+schools :[]
+  })
 
 export class School{
   constructor(data){
@@ -10,8 +14,9 @@ export class School{
     this.organization = data.organization
     this.stats = data.stats
   }
-createSchoolList(){
-schoolList = schoolListData.map(s=> new School(s))
+static createSchoolList(){
+const schools = schoolListData.map(s=> new School(s))
+appState.schools = schools
 }
   
 }
@@ -32,8 +37,4 @@ const schoolListData =[
 
 
 
-export const schoolList = reactive({
-  /** @type {import('./models/School.js').School} */
-schools :[]
-  })
 

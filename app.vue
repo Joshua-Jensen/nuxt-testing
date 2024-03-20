@@ -11,13 +11,15 @@
 
 <script>
 import { onMounted } from "vue"
+import { School } from "./models/School"
 export default {
   setup() {
-    function createSchoolList() {
-    }
+
     onMounted(() => {
       School.createSchoolList()
     })
+
+
     return {
 
     }

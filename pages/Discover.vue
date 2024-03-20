@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid discover">
     <DiscoverSchools />
-      <!-- <DiscoverStaff /> -->
+    <DiscoverStaff />
   </div>
 </template>
 

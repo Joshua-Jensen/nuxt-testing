@@ -2,7 +2,11 @@
   <div class="row justify-content-center">
     <div class="col-10 school-card p-3 rounded">
       <div class="row pe-3">
-
+        <div class="col-12">
+          <div class="flex justify-content-end m-3 border-control p-2 ">
+            <h1>Discover our Schools</h1>
+          </div>
+        </div>
         <div class="col-md-4">
           <div class="img-1 rounded my-2"></div>
           <div class="img-2 rounded my-2"></div>
@@ -25,7 +29,7 @@ import { computed, onMounted } from 'vue';
 
 
 export default {
-  
+
 
   setup() {
     const router = useRouter()
@@ -41,6 +45,14 @@ export default {
 
 
 <style lang="scss" scoped>
+.border-control {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
 .img-1 {
   height: 20vh;
   max-width: 100%;

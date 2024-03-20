@@ -4,7 +4,7 @@
     <div class="col-md-6 rounded">
       <h3>cutting edge it solutions</h3>
       <p>Our powerful tools helps schools reduce costs and optimize their operations. </p>
-      <button class="btn btn-primary">Learn More</button>
+      <button @click="" class="btn btn-primary">Learn More</button>
     </div>
     <div class="col-md-6 rounded d-flex justify-content-end padding">
       <img class="image shadow" src="/aiGirlAtDesk.png" alt="">

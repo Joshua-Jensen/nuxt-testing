@@ -31,7 +31,7 @@
           @mouseover="expand(1)" @mouseleave="collapse(1)">
 
           <h4 class="readability"> Testing Support</h4>
-          <p class="readability-dark rounded">Intellatek configures testing servers as well as the virtual TSM’s needed
+          <p class="readability-dark rounded"> Intellatek configures testing servers as well as the virtual TSM’s needed
             in
             order to
             test multiple grade

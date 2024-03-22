@@ -3,7 +3,7 @@
     <div class="col-md-6 padding">
       <h3>empowering schools with it solutions</h3>
       <h5>join our community of educators</h5>
-      <button class="btn btn-primary">get started</button>
+      <button @click="goToContact()" class="btn btn-primary">get started</button>
     </div>
     <div class="col-md-6 d-flex justify-content-end">
       <img class="rounded shadow" src="/empoweringAiImage.png" alt="">
@@ -14,11 +14,16 @@
 
 <script>
 import { computed, onMounted } from 'vue';
-
+import { useRouter } from '#vue-router';
 
 export default {
   setup() {
-    return {}
+    const router = useRouter()
+    return {
+      goToContact() {
+        router.push({ path: `/Contact` })
+      }
+    }
   }
 }
 </script>

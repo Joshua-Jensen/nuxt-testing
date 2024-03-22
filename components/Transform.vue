@@ -14,7 +14,7 @@
         <h5>get started today</h5>
       </div>
       <h5>discover power of technology</h5>
-      <button class="btn btn-rounded btn-primary">
+      <button @click="goToServices" class="btn btn-rounded btn-primary">
         View Services
       </button>
 
@@ -26,11 +26,17 @@
 
 <script>
 import { computed, onMounted } from 'vue';
-
+import { useRouter } from '#vue-router';
 
 export default {
   setup() {
-    return {}
+    const router = useRouter()
+    return {
+      goToServices() {
+        router.push({ path: `/services`, props: { scroll: 2 } })
+      }
+
+    }
   }
 }
 </script>

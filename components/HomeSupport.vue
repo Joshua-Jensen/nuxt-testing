@@ -9,7 +9,7 @@
       <!-- <h5> 24/7 support</h5> -->
       <h2>reliable support for your school</h2>
       <p>intellatek takes your security seriously so you can relax </p>
-      <button class="btn btn-primary ">contact support</button>
+      <button @click="goToContact" class="btn btn-primary ">contact support</button>
     </div>
   </div>
 </template>
@@ -17,11 +17,16 @@
 
 <script>
 import { computed, onMounted } from 'vue';
-
+import { useRouter } from '#vue-router';
 
 export default {
   setup() {
-    return {}
+    const router = useRouter()
+    return {
+      goToContact() {
+        router.push({ path: `/contact` })
+      }
+    }
   }
 }
 </script>

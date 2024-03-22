@@ -90,7 +90,10 @@ import { computed, onMounted, ref } from 'vue';
 
 
 export default {
-  setup() {
+  props: {
+    scroll: { type: Number, required: false }
+  },
+  setup(props) {
     const activeItem = ref({})
     const card1 = null
     const card2 = null
